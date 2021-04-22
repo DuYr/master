@@ -1,0 +1,60 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: school-master-admin
+  profiles:
+    active: dev
+
+  jackson:
+    default-property-inclusion: NON_NULL
+
+mybatis:
+  mapper-locations:
+    - classpath:mapper/*.xml
+pagehelper:
+  reasonable: true
+redis:
+  database: school_master #库名
+  key:
+    admin: 'master:admin' #前缀
+    sourceList: 'master:sourceList'
+  expire:
+    time: 86400 #24小时过期
+
+jwt:
+  #请求头
+  tokenHeader: Authorization
+  tokenHead: 'Bearer '
+  #密钥
+  secret: school-master-admin
+  #过期时间
+  expiration: 7200000
+  #刷新时间（指定时间内不刷新）
+  refresh: 1800
+
+password:
+  reset: '123456'
+  reg: '^[\\w_]{6,20}$'
+  salt: '256'
+
+secure:
+  ignored:
+    urls: #安全路径白名单
+      - /swagger-ui/**
+      - /swagger-resources/**
+      - /**/v2/api-docs
+      - /**/*.js
+      - /**/*.css
+      - /**/*.png
+      - /**/*.ico
+      - /webjars/springfox-swagger-ui/**
+      - /actuator/**
+      - /druid/**
+      - /admin/login
+      - /admin/logout
+logging:
+  pattern:
+    file:
+  level:
+    io.swagger.models.parameters.AbstractSerializableParameter: error

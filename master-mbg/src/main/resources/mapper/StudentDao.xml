@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.school.master.admin.dao.StudentDao">
+    <resultMap id="StudentMap" type="com.school.master.admin.dto.Student">
+        <id column="sid" jdbcType="INTEGER" property="sid"/>
+        <result column="pid" jdbcType="INTEGER" property="pid"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="remarks" jdbcType="VARCHAR" property="remarks"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    sid, pid, name, remarks
+  </sql>
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="StudentMap">
+        select
+        <include refid="Base_Column_List"/>
+        from tp_students
+        where sid = #{sid,jdbcType=INTEGER}
+    </select>
+    <select id="queryAllStudents" resultMap="StudentMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        tp_students
+        <where>
+            <if test="sid != null">
+                and sid = #{sid}
+            </if>
+            <if test="pid != null">
+                and pid = #{pid}
+            </if>
+            <if test="name !=null and name !=''">
+                and name=#{name}
+            </if>
+            <if test="remarks != null and remarks != ''">
+                and remarks = #{remarks}
+            </if>
+        </where>
+        ORDER BY sid
+    </select>
+    <select id="queryAllByLikeName" resultMap="StudentMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        tp_students
+        where name like #{likeName}
+        order by sid
+    </select>
+    <select id="queryAll" resultMap="StudentMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        tp_students
+        order by sid
+    </select>
+    <select id="queryAllByLikeSid" resultMap="StudentMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        school_master.tp_students
+        where sid like #{likeSid}
+        order by sid
+    </select>
+    <select id="queryAllByPid" resultMap="StudentMap">
+        select
+        <include refid="Base_Column_List"/>
+        from
+        school_master.tp_students
+        order by sid
+    </select>
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from tp_students
+    where sid = #{sid,jdbcType=INTEGER}
+  </delete>
+    <delete id="deleteByPid" parameterType="java.lang.Integer">
+        delete from tp_students
+        where pid=#{pid,jdbcType=INTEGER}
+    </delete>
+    <insert id="insert" keyColumn="sid" keyProperty="sid" useGeneratedKeys="true">
+    insert into tp_students (sid,pid, name, remarks
+      )
+    values (#{sid,jdbcType=INTEGER},#{pid,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{remarks,jdbcType=VARCHAR}
+      )
+  </insert>
+    <insert id="insertSelective" keyProperty="sid" useGeneratedKeys="true">
+        insert into tp_students
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="pid != null">
+                pid,
+            </if>
+            <if test="name != null">
+                name,
+            </if>
+            <if test="remarks != null">
+                remarks,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="pid != null">
+                #{pid,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="remarks != null">
+                #{remarks,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByStudent">
+        update tp_students
+        <set>
+            <if test="pid != null">
+                pid = #{pid,jdbcType=INTEGER},
+            </if>
+            <if test="name != null">
+                name = #{name,jdbcType=VARCHAR},
+            </if>
+            <if test="remarks != null">
+                remarks = #{remarks,jdbcType=VARCHAR},
+            </if>
+        </set>
+        where sid = #{sid,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey">
+    update tp_students
+    set pid = #{pid,jdbcType=INTEGER},
+      name = #{name,jdbcType=VARCHAR},
+      remarks = #{remarks,jdbcType=VARCHAR}
+    where sid = #{sid,jdbcType=INTEGER}
+  </update>
+</mapper>

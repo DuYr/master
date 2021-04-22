@@ -1,0 +1,32 @@
+server:
+  port: 8090
+spring:
+  application:
+    name: school-master-upload
+  profiles:
+    active: dev
+
+  jackson:
+    default-property-inclusion: NON_NULL
+
+mybatis:
+  config-location:
+    - classpath:mapper/*.xml
+
+vsftpd:
+  connection:
+    host: '127.0.0.1'
+    port: '21'
+    username: 'ftp'
+    password: '123456'
+    max-pool: 10
+    time-out: 500
+
+upload:
+    file:
+      images: 'png,jpg,jpeg'
+
+
+logging:
+  level:
+    io.swagger.models.parameters.AbstractSerializableParameter: error
