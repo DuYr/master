@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "secure.ignored",
+      "type": "com.school.master.security.config.IgnoreUrlsConfig",
+      "sourceType": "com.school.master.security.config.IgnoreUrlsConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "secure.ignored.urls",
+      "type": "java.util.List<java.lang.String>",
+      "sourceType": "com.school.master.security.config.IgnoreUrlsConfig"
+    }
+  ],
+  "hints": []
+}

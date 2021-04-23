@@ -1,0 +1,12 @@
+com\school\master\upload\config\BeanConfig.class
+com\school\master\upload\service\impl\UmsAdminServiceImpl.class
+com\school\master\upload\controller\AdminImageController.class
+com\school\master\upload\service\impl\AvatarServiceImpl.class
+com\school\master\upload\MasterUploadApplication.class
+com\school\master\upload\service\AvatarService.class
+com\school\master\upload\service\UmsAdminService.class
+com\school\master\upload\config\GlobalCorsConfig.class
+com\school\master\upload\domain\AdminUserDetails.class
+com\school\master\upload\config\SwaggerConfig.class
+com\school\master\upload\config\MyBatisConig.class
+com\school\master\upload\config\UploadWebSecurityConfig.class

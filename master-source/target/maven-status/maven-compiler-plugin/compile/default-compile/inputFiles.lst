@@ -1,0 +1,12 @@
+D:\master\master-source\src\main\java\com\school\master\upload\config\MyBatisConig.java
+D:\master\master-source\src\main\java\com\school\master\upload\MasterUploadApplication.java
+D:\master\master-source\src\main\java\com\school\master\upload\controller\AdminImageController.java
+D:\master\master-source\src\main\java\com\school\master\upload\config\SwaggerConfig.java
+D:\master\master-source\src\main\java\com\school\master\upload\config\BeanConfig.java
+D:\master\master-source\src\main\java\com\school\master\upload\config\GlobalCorsConfig.java
+D:\master\master-source\src\main\java\com\school\master\upload\service\AvatarService.java
+D:\master\master-source\src\main\java\com\school\master\upload\domain\AdminUserDetails.java
+D:\master\master-source\src\main\java\com\school\master\upload\service\impl\UmsAdminServiceImpl.java
+D:\master\master-source\src\main\java\com\school\master\upload\service\UmsAdminService.java
+D:\master\master-source\src\main\java\com\school\master\upload\config\UploadWebSecurityConfig.java
+D:\master\master-source\src\main\java\com\school\master\upload\service\impl\AvatarServiceImpl.java

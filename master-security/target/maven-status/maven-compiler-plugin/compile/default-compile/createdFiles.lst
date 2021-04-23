@@ -1,0 +1,11 @@
+com\school\master\security\componet\DynamicAccessDecisionManager.class
+com\school\master\security\componet\JwtAuthenticationTokenFilter.class
+com\school\master\security\config\IgnoreUrlsConfig.class
+com\school\master\security\config\SecurityConfig.class
+com\school\master\security\componet\DynamicSecurityFilter.class
+com\school\master\security\util\JwtTokenUtil.class
+com\school\master\security\componet\DynamicSecurityService.class
+com\school\master\security\componet\DynamicSecurityMetadataSource.class
+com\school\master\security\componet\RestfulAccessDeniedHandler.class
+META-INF\spring-configuration-metadata.json
+com\school\master\security\componet\RestAuthenticationEntryPoint.class

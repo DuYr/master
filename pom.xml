@@ -11,7 +11,7 @@
     <modules>
         <module>master-admin</module>
         <module>master-common</module>
-        <module>master-upload</module>
+        <module>master-source</module>
         <module>master-security</module>
         <module>master-mbg</module>
     </modules>
