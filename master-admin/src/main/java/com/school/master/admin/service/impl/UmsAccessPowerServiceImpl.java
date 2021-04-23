@@ -1,8 +1,8 @@
 package com.school.master.admin.service.impl;
 
 import com.school.master.admin.service.UmsAccessPowerService;
-import com.school.master.admin.dao.UmsAccessPowerDao;
-import com.school.master.admin.dto.UmsAccessPower;
+import com.school.master.mapper.UmsAccessPowerDao;
+import com.school.master.model.UmsAccessPower;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +17,7 @@ import java.util.List;
 @Service("umsAccessPowerService")
 public class UmsAccessPowerServiceImpl implements UmsAccessPowerService {
     @Autowired
-    private UmsAccessPowerDao UmsAccessPowerDao;
+    private UmsAccessPowerDao umsAccessPowerDao;
 
     /**
      * 通过ID查询单条数据
@@ -27,12 +27,12 @@ public class UmsAccessPowerServiceImpl implements UmsAccessPowerService {
      */
     @Override
     public UmsAccessPower queryById(Integer id) {
-        return this.UmsAccessPowerDao.selectByPrimaryKey(id);
+        return this.umsAccessPowerDao.selectByPrimaryKey(id);
     }
 
     @Override
     public List<UmsAccessPower> queryAll() {
-        return this.UmsAccessPowerDao.queryAllList();
+        return this.umsAccessPowerDao.queryAllList();
     }
 
     /**
@@ -43,7 +43,7 @@ public class UmsAccessPowerServiceImpl implements UmsAccessPowerService {
      */
     @Override
     public UmsAccessPower insert(UmsAccessPower UmsAccessPower) {
-        this.UmsAccessPowerDao.insert(UmsAccessPower);
+        this.umsAccessPowerDao.insert(UmsAccessPower);
         return UmsAccessPower;
     }
 
@@ -55,7 +55,7 @@ public class UmsAccessPowerServiceImpl implements UmsAccessPowerService {
      */
     @Override
     public UmsAccessPower update(UmsAccessPower UmsAccessPower) {
-        this.UmsAccessPowerDao.updateByPrimaryKey(UmsAccessPower);
+        this.umsAccessPowerDao.updateByPrimaryKey(UmsAccessPower);
         return this.queryById(UmsAccessPower.getId());
     }
 
@@ -67,6 +67,6 @@ public class UmsAccessPowerServiceImpl implements UmsAccessPowerService {
      */
     @Override
     public boolean deleteById(Integer id) {
-        return this.UmsAccessPowerDao.deleteByPrimaryKey(id) > 0;
+        return this.umsAccessPowerDao.deleteByPrimaryKey(id) > 0;
     }
 }

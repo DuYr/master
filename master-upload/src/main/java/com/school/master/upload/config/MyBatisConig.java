@@ -6,6 +6,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@MapperScan({"com.school.master.upload.dao"})
+@MapperScan({"com.school.master.mapper","com.school.master.upload.dao"})
 public class MyBatisConig {
 }

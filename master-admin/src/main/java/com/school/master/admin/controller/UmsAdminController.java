@@ -6,6 +6,7 @@ import com.school.master.common.api.CommonResult;
 import com.school.master.common.api.PageResult;
 import com.school.master.admin.dto.*;
 import com.school.master.admin.service.UmsAdminService;
+import com.school.master.model.UmsAdmin;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

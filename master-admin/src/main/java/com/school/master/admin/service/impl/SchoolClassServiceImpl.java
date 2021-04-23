@@ -1,16 +1,16 @@
 package com.school.master.admin.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.school.master.admin.dao.SchoolClassDao;
 import com.school.master.admin.domain.BeanOperation;
-import com.school.master.admin.dto.College;
-import com.school.master.admin.dto.SchoolClass;
 import com.school.master.admin.dto.UpdateClassParam;
 import com.school.master.admin.service.CollegeService;
 import com.school.master.admin.service.SchoolClassService;
 import com.school.master.admin.service.StudentService;
 import com.school.master.admin.vo.SchoolClassVo;
 import com.school.master.common.exception.Asserts;
+import com.school.master.mapper.SchoolClassDao;
+import com.school.master.model.College;
+import com.school.master.model.SchoolClass;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;

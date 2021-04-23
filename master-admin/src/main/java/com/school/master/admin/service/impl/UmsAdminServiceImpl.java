@@ -7,10 +7,12 @@ import com.school.master.admin.service.SchoolClassService;
 import com.school.master.common.exception.Asserts;
 import com.school.master.common.exception.UserNotFoundException;
 import com.school.master.common.utils.BaseVaildUtil;
+import com.school.master.mapper.UmsAdminDao;
+import com.school.master.model.AdminLoginLog;
+import com.school.master.model.UmsAdmin;
 import com.school.master.security.util.JwtTokenUtil;
 import com.school.master.common.utils.PasswordEnCodeUtil;
 import com.school.master.admin.domain.AdminUserDetails;
-import com.school.master.admin.dao.UmsAdminDao;
 import com.school.master.admin.dto.*;
 import com.school.master.admin.service.AdminLoginLogService;
 import com.school.master.admin.service.UmsAdminCacheService;
@@ -82,7 +84,8 @@ public class UmsAdminServiceImpl implements UmsAdminService {
             umsAdminCacheService.setUmsAdmin(umsAdmin);
             return new AdminUserDetails(umsAdmin);
         }
-        throw new UserNotFoundException("账号不存在");
+        //账号不存在
+        throw new UserNotFoundException("账号或密码错误");
     }
 
     @Override

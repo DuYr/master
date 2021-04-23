@@ -1,6 +1,6 @@
 package com.school.master.admin.service;
 
-import com.school.master.admin.dto.UmsAdmin;
+import com.school.master.model.UmsAdmin;
 
 import java.util.List;
 

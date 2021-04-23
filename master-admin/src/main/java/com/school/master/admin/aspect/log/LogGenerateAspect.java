@@ -6,6 +6,8 @@ import com.school.master.admin.dto.*;
 import com.school.master.admin.service.AbsentDetailsService;
 import com.school.master.admin.service.LogAbsentService;
 import com.school.master.common.utils.DateVaildUtil;
+import com.school.master.model.AbsentDetails;
+import com.school.master.model.LogAbsent;
 import io.swagger.models.auth.In;
 import net.logstash.logback.encoder.org.apache.commons.lang3.StringUtils;
 import org.aspectj.lang.JoinPoint;

@@ -1,10 +1,8 @@
 package com.school.master.common.cache;
 
-import cn.hutool.crypto.digest.MD5;
 import com.school.master.common.annotation.RedisCache;
 import com.school.master.common.service.RedisService;
 import com.school.master.common.utils.PasswordEnCodeUtil;
-import jdk.nashorn.internal.objects.annotations.Property;
 import org.apache.poi.ss.formula.functions.T;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
@@ -13,11 +11,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Component;
-
-import java.security.Principal;
-import java.util.List;
 
 
 /**

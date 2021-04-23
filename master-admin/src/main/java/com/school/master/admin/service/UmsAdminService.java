@@ -2,7 +2,6 @@ package com.school.master.admin.service;
 
 
 import com.school.master.admin.dto.CreateUmsAdminParam;
-import com.school.master.admin.dto.UmsAdmin;
 import com.school.master.admin.dto.UpdateAdminParam;
 import com.school.master.admin.dto.UpdatePasswordAdminParam;
 import org.springframework.security.core.userdetails.UserDetails;

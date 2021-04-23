@@ -1,8 +1,8 @@
 package com.school.master.admin;
 
+import com.school.master.model.UmsAdmin;
 import com.school.master.security.util.JwtTokenUtil;
 import com.school.master.admin.domain.AdminUserDetails;
-import com.school.master.admin.dto.UmsAdmin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;

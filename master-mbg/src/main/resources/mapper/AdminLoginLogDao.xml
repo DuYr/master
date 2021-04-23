@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.school.master.admin.dao.AdminLoginLogDao">
+<mapper namespace="com.school.master.mapper.AdminLoginLogDao">
 
-    <resultMap type="com.school.master.admin.dto.AdminLoginLog" id="AdminLoginLogMap">
+    <resultMap type="com.school.master.model.AdminLoginLog" id="AdminLoginLogMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="username" column="user" jdbcType="VARCHAR"/>
         <result property="password" column="pass" jdbcType="VARCHAR"/>

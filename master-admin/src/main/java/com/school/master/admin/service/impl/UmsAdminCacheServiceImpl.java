@@ -1,8 +1,8 @@
 package com.school.master.admin.service.impl;
 
 import com.school.master.common.service.RedisService;
-import com.school.master.admin.dto.UmsAdmin;
 import com.school.master.admin.service.UmsAdminCacheService;
+import com.school.master.model.UmsAdmin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

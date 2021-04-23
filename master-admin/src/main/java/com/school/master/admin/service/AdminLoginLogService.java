@@ -1,6 +1,6 @@
 package com.school.master.admin.service;
 
-import com.school.master.admin.dto.AdminLoginLog;
+import com.school.master.model.AdminLoginLog;
 
 import java.util.List;
 

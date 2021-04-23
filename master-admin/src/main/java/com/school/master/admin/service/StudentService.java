@@ -2,8 +2,8 @@ package com.school.master.admin.service;
 
 
 import com.school.master.admin.dto.CreateStudentParam;
-import com.school.master.admin.dto.Student;
 import com.school.master.admin.dto.UpdateStudentParam;
+import com.school.master.model.Student;
 
 import java.util.List;
 

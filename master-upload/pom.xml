@@ -14,15 +14,15 @@
         <groupId>com.school.master</groupId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+
     <dependencies>
         <dependency>
             <groupId>com.school.master</groupId>
-            <artifactId>master-security</artifactId>
+            <artifactId>master-mbg</artifactId>
         </dependency>
-        <!--Swagger-UI API文档生产工具-->
         <dependency>
-            <groupId>io.springfox</groupId>
-            <artifactId>springfox-boot-starter</artifactId>
+            <groupId>com.school.master</groupId>
+            <artifactId>master-security</artifactId>
         </dependency>
         <dependency>
             <groupId>com.school.master</groupId>

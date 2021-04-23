@@ -23,7 +23,6 @@ public class ExcelHandleController {
 
     @GetMapping("/export/{umit}")
     @ApiImplicitParam(name = "umit", value = "student->学生;class->班级;")
-//            defaultValue = "class", allowableValues = "student,class", paramType = "query", dataType = "String")
     public CommonResult exportExecl(HttpServletResponse response,
                                     @PathVariable String umit,
                                     @RequestParam Integer id,

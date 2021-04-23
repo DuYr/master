@@ -1,8 +1,6 @@
 package com.school.master.execl.service.impl;
 
 import cn.hutool.core.collection.CollectionUtil;
-import com.school.master.admin.dto.AbsentDetails;
-import com.school.master.admin.dto.Student;
 import com.school.master.admin.service.AbsentDetailsService;
 import com.school.master.admin.service.SchoolClassService;
 import com.school.master.common.api.ResultStatu;
@@ -10,6 +8,8 @@ import com.school.master.common.exception.Asserts;
 import com.school.master.common.utils.DateVaildUtil;
 import com.school.master.common.utils.ExcelUtils;
 import com.school.master.execl.column.AbsenceColumn;
+import com.school.master.model.AbsentDetails;
+import com.school.master.model.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;

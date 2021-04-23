@@ -2,12 +2,12 @@ package com.school.master.admin.task;
 
 import cn.hutool.core.collection.CollectionUtil;
 import cn.hutool.core.date.DateUtil;
-import com.school.master.admin.dto.AbsentDetails;
 import com.school.master.admin.service.AbsentDetailsService;
 import com.school.master.admin.service.ClassAbsentService;
 import com.school.master.admin.service.SchoolClassService;
 import com.school.master.admin.service.StudentService;
 import com.school.master.common.utils.DateVaildUtil;
+import com.school.master.model.AbsentDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;

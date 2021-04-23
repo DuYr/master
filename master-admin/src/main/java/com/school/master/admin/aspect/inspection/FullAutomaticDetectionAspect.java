@@ -1,13 +1,13 @@
 package com.school.master.admin.aspect.inspection;
 
 import cn.hutool.core.collection.CollectionUtil;
-import com.school.master.admin.dto.AbsentDetails;
 import com.school.master.admin.dto.CreateAbsentParam;
 import com.school.master.admin.dto.DeleteAbsentParam;
 import com.school.master.admin.service.AbsentDetailsService;
 import com.school.master.admin.service.ClassAbsentService;
 import com.school.master.admin.service.StudentService;
 import com.school.master.common.utils.DateVaildUtil;
+import com.school.master.model.AbsentDetails;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.AfterReturning;
 import org.aspectj.lang.annotation.Aspect;

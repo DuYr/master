@@ -1,11 +1,11 @@
 package com.school.master.admin.controller;
 
-import com.school.master.common.api.CommonResult;
-import com.school.master.common.api.PageResult;
-import com.school.master.admin.dto.AdminLoginLog;
-import com.school.master.admin.dto.LogAbsent;
 import com.school.master.admin.service.AdminLoginLogService;
 import com.school.master.admin.service.LogAbsentService;
+import com.school.master.common.api.CommonResult;
+import com.school.master.common.api.PageResult;
+import com.school.master.model.AdminLoginLog;
+import com.school.master.model.LogAbsent;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

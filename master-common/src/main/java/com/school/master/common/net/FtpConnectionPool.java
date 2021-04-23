@@ -1,6 +1,6 @@
 package com.school.master.common.net;
 
-import com.school.master.common.config.FtpUploadConfig;
+import com.school.master.common.config.FtpClientConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,34 +14,32 @@ import java.util.concurrent.ConcurrentHashMap;
  * @Description: ftp对象中连接池
  * @Version 1.0.0
  */
-public class FtpConnectionPool {
-    private FtpUploadConfig ftpConfig;
-    private static FtpConnectionPool ftpConnectionPool;
+public class FtpConnectionPool implements FtpPool {
+    private FtpClientConfig ftpConfig;
+    private static FtpConnectionPool ftpPool;
     private Integer currentMaxPool;
-    private volatile static Map<Integer, MyFtpClient> ftpPoolMap;
-    Class clazz;
+    private volatile static Map<Integer, FtpClient> ftpPoolMap;
     private Logger logger = LoggerFactory.getLogger(FtpConnectionPool.class);
 
-    private FtpConnectionPool(FtpUploadConfig ftpConfig) {
+    private FtpConnectionPool(FtpClientConfig ftpConfig) {
         this.ftpConfig = ftpConfig;
         this.currentMaxPool = ftpConfig.getMaxPool();
         ftpPoolMap = new ConcurrentHashMap<>(ftpConfig.getMaxPool());
         for (int key = 0; key < ftpConfig.getMaxPool(); key++) {
-            MyFtpClient ftpClient = new MyFtpClient(ftpConfig.getHost(), ftpConfig.getPort(), ftpConfig.getUsername(), ftpConfig.getPassword());
+            FtpClient ftpClient = new FtpClient(ftpConfig);
             ftpPoolMap.put(ftpClient.hashCode(), ftpClient);
         }
     }
 
-
-    public static FtpConnectionPool createPool(FtpUploadConfig ftpConfig) {
+    public static FtpConnectionPool createPool(FtpClientConfig ftpClientConfig) {
         if (ftpPoolMap == null) {
             synchronized (FtpConnectionPool.class) {
                 if (ftpPoolMap == null) {
-                    ftpConnectionPool = new FtpConnectionPool(ftpConfig);
+                    ftpPool = new FtpConnectionPool(ftpClientConfig);
                 }
             }
         }
-        return ftpConnectionPool;
+        return ftpPool;
     }
 
     /**
@@ -49,15 +47,15 @@ public class FtpConnectionPool {
      *
      * @return
      */
-
-    public MyFtpClient getMyFtpClient() {
+    @Override
+    public FtpClient getFtpClient() {
         synchronized (FtpConnectionPool.class) {
             for (Integer key : ftpPoolMap.keySet()) {
                 if (ftpPoolMap.get(key) != null) {
                     return ftpPoolMap.get(key);
                 }
             }
-            MyFtpClient ftpClient = new MyFtpClient(ftpConfig.getHost(), ftpConfig.getPort(), ftpConfig.getUsername(), ftpConfig.getPassword());
+            FtpClient ftpClient = new FtpClient(ftpConfig);
             this.currentMaxPool++;
             ftpPoolMap.put(ftpClient.hashCode(), ftpClient);
             //占位
@@ -73,23 +71,31 @@ public class FtpConnectionPool {
      *
      * @param ftpClient
      */
-
-    public void replaceMapPool(MyFtpClient ftpClient) {
+    @Override
+    public void replaceMapPool(FtpClient ftpClient) {
         for (Integer key : ftpPoolMap.keySet()) {
             if (key.equals(ftpClient.hashCode())) {
                 ftpPoolMap.put(key, ftpClient);
-                logger.info("放回连接hashcode:{}",key);
-                ftpClient=null;
+                logger.info("放回连接hashcode:{}", key);
+                ftpClient = null;
             }
         }
     }
 
+    @Override
+    public void clearPool() {
+        FtpConnectionPool.ftpPoolMap.forEach((key, value) -> value = null);
+        ftpPool = null;
+        System.gc();
+    }
 
-    public FtpUploadConfig getFtpConfig() {
+    @Override
+    public FtpClientConfig getFtpConfig() {
         return ftpConfig;
     }
 
-    public void setFtpConfig(FtpUploadConfig ftpConfig) {
+    @Override
+    public void setFtpConfig(FtpClientConfig ftpConfig) {
         this.ftpConfig = ftpConfig;
     }
 }

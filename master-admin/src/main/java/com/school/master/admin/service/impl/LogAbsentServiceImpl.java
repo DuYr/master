@@ -1,9 +1,9 @@
 package com.school.master.admin.service.impl;
 
 import com.github.pagehelper.PageHelper;
-import com.school.master.admin.dao.LogAbsentDao;
-import com.school.master.admin.dto.LogAbsent;
 import com.school.master.admin.service.LogAbsentService;
+import com.school.master.mapper.LogAbsentDao;
+import com.school.master.model.LogAbsent;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

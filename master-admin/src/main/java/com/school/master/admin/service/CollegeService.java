@@ -1,8 +1,8 @@
 package com.school.master.admin.service;
 
-import com.school.master.admin.dto.College;
 import com.school.master.admin.dto.CreateCollegeParam;
 import com.school.master.admin.dto.UpdateCollegeParam;
+import com.school.master.model.College;
 
 import java.util.List;
 

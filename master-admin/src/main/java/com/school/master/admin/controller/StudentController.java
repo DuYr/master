@@ -3,9 +3,9 @@ package com.school.master.admin.controller;
 import com.school.master.common.api.CommonResult;
 import com.school.master.common.api.PageResult;
 import com.school.master.admin.dto.CreateStudentParam;
-import com.school.master.admin.dto.Student;
 import com.school.master.admin.dto.UpdateStudentParam;
 import com.school.master.admin.service.StudentService;
+import com.school.master.model.Student;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +13,6 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 @Api(description = "学生管理")

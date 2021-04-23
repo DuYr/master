@@ -1,6 +1,6 @@
 package com.school.master.admin.domain;
 
-import com.school.master.admin.dto.UmsAdmin;
+import com.school.master.model.UmsAdmin;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;

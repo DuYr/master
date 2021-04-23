@@ -6,6 +6,6 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @EnableTransactionManagement
-@MapperScan({"com.school.master.admin.dao"})
+@MapperScan({"com.school.master.mapper","com.school.master.admin.dao"})
 public class MyBatisConfig {
 }

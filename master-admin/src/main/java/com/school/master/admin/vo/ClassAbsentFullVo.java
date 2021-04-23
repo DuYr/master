@@ -1,12 +1,7 @@
 package com.school.master.admin.vo;
 
-import com.school.master.admin.dto.ClassAbsent;
-import com.school.master.admin.service.SchoolClassService;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.school.master.model.ClassAbsent;
 import org.springframework.stereotype.Component;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * @FileName: ClassAbsentFull

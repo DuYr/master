@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.school.master.admin.dao.CollegeDao">
+<mapper namespace="com.school.master.mapper.CollegeDao">
 
-    <resultMap type="com.school.master.admin.dto.College" id="CollegeMap">
+    <resultMap type="com.school.master.model.College" id="CollegeMap">
         <result property="cid" column="cid" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 
+    <sql id="cloumn_params">
+        cid, name, create_time
+    </sql>
+
     <!--查询单个-->
     <select id="queryById" resultMap="CollegeMap">
         select
-          cid, name, create_time
+        <include refid="cloumn_params"/>
         from school_master.tp_college
         where cid = #{cid}
     </select>
@@ -19,15 +23,16 @@
     <!--查询指定行数据-->
     <select id="queryAllByLimit" resultMap="CollegeMap">
         select
-          cid, name, create_time
+        <include refid="cloumn_params"/>
         from school_master.tp_college
         limit #{offset}, #{limit}
+        order by cid
     </select>
 
     <!--通过实体作为筛选条件查询-->
     <select id="queryAll" resultMap="CollegeMap">
         select
-        cid, name, create_time
+        <include refid="cloumn_params"/>
         from school_master.tp_college
         <where>
             <if test="cid != null and cid != ''">
@@ -40,10 +45,11 @@
                 and create_time = #{createTime}
             </if>
         </where>
+        order by cid
     </select>
     <select id="queryAllByName" resultMap="CollegeMap">
         select
-        cid,name,create_time
+        <include refid="cloumn_params"/>
         from
         school_master.tp_college
         where name=#{name}

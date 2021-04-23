@@ -1,7 +1,7 @@
 package com.school.master.admin.service;
 
-import com.school.master.admin.dto.ClassAbsent;
 import com.school.master.admin.vo.ClassAbsentFullVo;
+import com.school.master.model.ClassAbsent;
 
 import java.util.Date;
 import java.util.List;

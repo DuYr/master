@@ -1,6 +1,6 @@
 package com.school.master.admin.service;
 
-import com.school.master.admin.dto.LogAbsent;
+import com.school.master.model.LogAbsent;
 
 import java.util.List;
 

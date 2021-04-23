@@ -1,7 +1,7 @@
 package com.school.master.admin.service;
 
 
-import com.school.master.admin.dto.UmsAccessPower;
+import com.school.master.model.UmsAccessPower;
 
 import java.util.List;
 

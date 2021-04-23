@@ -1,9 +1,7 @@
 package com.school.master.admin.domain;
 
-import com.school.master.admin.dto.AdminLoginLog;
-import com.school.master.admin.dto.Student;
-import com.school.master.admin.dto.UmsAdmin;
-import com.school.master.admin.dto.UpdateStudentParam;
+import com.school.master.model.AdminLoginLog;
+import com.school.master.model.UmsAdmin;
 import org.springframework.beans.BeanUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 

@@ -1,7 +1,7 @@
 package com.school.master.admin.vo;
 
-import com.school.master.admin.dto.AbsentDetails;
-import com.school.master.admin.dto.Student;
+import com.school.master.model.AbsentDetails;
+import com.school.master.model.Student;
 
 import java.util.List;
 

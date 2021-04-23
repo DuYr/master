@@ -1,6 +1,6 @@
 package com.school.master.admin.vo;
 
-import com.school.master.admin.dto.Student;
+import com.school.master.model.Student;
 
 public class StudentVo extends Student {
     private String roomName;

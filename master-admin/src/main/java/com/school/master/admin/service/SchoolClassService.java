@@ -1,11 +1,10 @@
 package com.school.master.admin.service;
 
-import com.school.master.admin.dto.SchoolClass;
 import com.school.master.admin.dto.UpdateClassParam;
 import com.school.master.admin.vo.SchoolClassVo;
+import com.school.master.model.SchoolClass;
 
 import java.util.List;
-import java.util.Map;
 
 
 public interface SchoolClassService {

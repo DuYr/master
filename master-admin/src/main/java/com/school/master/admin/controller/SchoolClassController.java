@@ -1,11 +1,11 @@
 package com.school.master.admin.controller;
 
-import com.school.master.admin.dto.SchoolClass;
 import com.school.master.common.api.CommonResult;
 import com.school.master.common.api.PageResult;
 import com.school.master.admin.dto.CreateClassParam;
 import com.school.master.admin.dto.UpdateClassParam;
 import com.school.master.admin.service.SchoolClassService;
+import com.school.master.model.SchoolClass;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

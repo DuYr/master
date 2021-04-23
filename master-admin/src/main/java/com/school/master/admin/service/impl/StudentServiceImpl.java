@@ -2,16 +2,15 @@ package com.school.master.admin.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.school.master.admin.domain.CriteriaGenerate;
-import com.school.master.common.api.ResultStatu;
 import com.school.master.common.exception.ApiException;
 import com.school.master.common.exception.Asserts;
-import com.school.master.admin.dao.StudentDao;
 import com.school.master.admin.domain.BeanOperation;
 import com.school.master.admin.dto.CreateStudentParam;
-import com.school.master.admin.dto.Student;
 import com.school.master.admin.dto.UpdateStudentParam;
 import com.school.master.admin.service.StudentService;
 import com.school.master.admin.service.SchoolClassService;
+import com.school.master.mapper.StudentDao;
+import com.school.master.model.Student;
 import net.logstash.logback.encoder.org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

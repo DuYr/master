@@ -1,10 +1,8 @@
 package com.school.master.admin.vo;
 
 
-import com.school.master.admin.dto.College;
-import com.school.master.admin.dto.SchoolClass;
-
-import java.util.Date;
+import com.school.master.model.College;
+import com.school.master.model.SchoolClass;
 
 public class SchoolClassVo extends SchoolClass {
     /**
