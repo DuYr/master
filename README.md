@@ -122,7 +122,7 @@ master
 
 school-master项目学习可以扫码加群
 
-![公众号图片](http://macro-oss.oss-cn-shenzhen.aliyuncs.com/mall/banner/qrcode_for_macrozheng_258.jpg)
+![公众号图片]()
 
 ## 许可证
 
